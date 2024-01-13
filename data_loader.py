@@ -28,7 +28,7 @@ def fetch_stock_data(ticker):
     except Exception as e:
         return None
 
-@st.cache_data(ttl=3600, show_spinner=False)
+# @st.cache_data(ttl=3600, show_spinner=False)
 def fetch_real_time_stock_data(tickers):
     data_list = []
 
