@@ -61,7 +61,6 @@ def candle_data(data):
         paper_bgcolor="black",
         font_color="white",
     )
-
     st.plotly_chart(fig)
 
 def raw_data(data, pred_val= None):
