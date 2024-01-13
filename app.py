@@ -86,6 +86,7 @@ with real_time:
     real_time_view, company_performance = st.tabs(["Real-Time", "Company Performance"])
 
     with company_performance:
+        
         selected_company = st.selectbox("Select Company", tickers)
         data_his = yf.download(dict_csv.get(selected_company), start, end).iloc[1:]
         data_his.reset_index(inplace=True)
@@ -127,6 +128,7 @@ with prediction:
 
     if b == "":
         st.write("Enter a Stock Name")
+    
     else:
         data = yf.download(symb_list, start='2019-01-01', end=end)
         data.reset_index(inplace=True)
