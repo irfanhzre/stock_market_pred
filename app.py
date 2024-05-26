@@ -10,8 +10,8 @@ import pandas as pd
 df = pd.read_csv('train.csv')
 
 # Assuming X is your feature matrix and y is your target variable
-X = df.drop(columns=['target_column_name'])
-y = df['target_column_name']
+X = df.drop(columns=['SalePrice'])
+y = df['SalePrice']
 
 # Step 3: Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
