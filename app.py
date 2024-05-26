@@ -7,7 +7,7 @@ import pandas as pd
 
 # Step 1: Load your dataset
 # Assuming 'data.csv' contains your dataset
-df = pd.read_csv('data.csv')
+df = pd.read_csv('train.csv')
 
 # Assuming X is your feature matrix and y is your target variable
 X = df.drop(columns=['target_column_name'])
