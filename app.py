@@ -5,6 +5,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
+import numpy as np
 
 # Step 1: Load your dataset
 # Assuming 'data.csv' contains your dataset
@@ -18,6 +19,9 @@ y = df['SalePrice']
 # Handle missing values
 imputer = SimpleImputer(strategy='mean')
 X_imputed = imputer.fit_transform(X)
+
+# Convert X_imputed back to a DataFrame
+X_imputed = pd.DataFrame(X_imputed, columns=X.columns)
 
 # Scale the features
 scaler = StandardScaler()
